@@ -1,15 +1,23 @@
 {
-     name: "Hypixel",
-     ip: "mc.hypixel.net",
-     description: "No.1 Minecraft Server. Minigames & Skyblock."
-},
-{
-      name: "Wynncraft",
-      ip: "play.wynncraft.com",
-      description: "The largest MMORPG in Minecraft."
-},
-{
-       name: "Complex Gaming",
-       ip: "hub.mc-complex.com",
-       description: "Pixelmon, Skyblock, Factions & more!"
+  "premium": [
+    {    "name": "Hypixel", 
+         "ip": "mc.hypixel.net",
+         "description": "The #1 Server"
+    },
+    { 
+         "name": "Wynncraft",
+         "ip": "play.wynncraft.com", 
+         "description": "MMORPG" }
+  ],
+  "cracked": [
+    { 
+         "name": "Complex",
+         "ip": "hub.mc-complex.com", 
+         "description": "Pixelmon" 
+    },
+    { 
+         "name": "PikaNetwork", 
+         "ip": "play.pika-network.net", 
+         "description": "Cracked PVP" }
+  ]
 }
