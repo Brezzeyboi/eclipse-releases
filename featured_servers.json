@@ -1,23 +1,34 @@
-{
-  "premium": [
-    {    "name": "Hypixel", 
-         "ip": "mc.hypixel.net",
-         "description": "The #1 Server"
-    },
-    { 
-         "name": "Wynncraft",
-         "ip": "play.wynncraft.com", 
-         "description": "MMORPG" }
-  ],
-  "cracked": [
-    { 
-         "name": "Complex",
-         "ip": "hub.mc-complex.com", 
-         "description": "Pixelmon" 
-    },
-    { 
-         "name": "PikaNetwork", 
-         "ip": "play.pika-network.net", 
-         "description": "Cracked PVP" }
-  ]
-}
+                    premium: [
+                        { 
+                            name: "Hypixel", 
+                            ip: "mc.hypixel.net", 
+                            description: "The #1 Minecraft Server" 
+                        },
+                        { 
+                            name: "Wynncraft", 
+                            ip: "play.wynncraft.com", 
+                            description: "Largest MMORPG" 
+                        },
+                        { 
+                            name: "CubeCraft", 
+                            ip: "play.cubecraft.net", 
+                            description: "Exclusively Premium"
+                         }
+                    ],
+                    cracked: [
+                        {
+                             name: "Complex Gaming", 
+                             ip: "hub.mc-complex.com",
+                              description: "Pixelmon, Skyblock"
+                             },
+                        { 
+                            name: "PikaNetwork", 
+                            ip: "play.pika-network.net", 
+                            description: "Top Cracked Server"
+                         },
+                        { 
+                            name: "JartexNetwork",
+                             ip: "play.jartexnetwork.com",
+                              description: "Factions & Skyblock" 
+                            }
+                    ]
