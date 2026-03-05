@@ -1,11 +1,11 @@
 {
-  "version": "v1.0.0-alpha-7",
-  "notes": "Update v1.0.0-alpha-7",
-  "pub_date": "2026-02-26T20:18:17.516Z",
+  "version": "v1.0.0-alpha-8",
+  "notes": "Update v1.0.0-alpha-8",
+  "pub_date": "2026-03-05T13:41:11.504Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTZ3JzQ0IycldabVdSRnMyK2tLblNkcUxWd2RNSlp5b3l6cTc4cE9tYlFET3RTRXNOZGpvTnluQUlkNXZoM091bktSZ1lVa2JncG1HRFJKUUFvVkM1bVBuT2VISTBwSlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcyMTM3MDkxCWZpbGU6RWNsaXBzZSBMYXVuY2hlcl8xLjAuMC1hbHBoYS03X3g2NC1zZXR1cC5leGUKamlma0ZlSk5iYWg1QlppV1VhVkg3VUE2SWU3V3F1Nkx1bzJBL1NTaVBCcHVLc2VEQjc0TDRaRnZic1R1dm42RHpUWTYzN1NQM2JieCtsbWpXU3RRRFE9PQo=",
-      "url": "https://github.com/Brezzeyboi/aether-releases/releases/download/v1.0.0-alpha-7/Eclipse.Launcher_1.0.0-alpha-7_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTZ3JzQ0IycldabVNIQXg0dHdPRWRYVlV3bTNNSXBnaWZSMFUvV2NXYXlYOWRwL3h0YXRMdkUwSksrSmx4RWJ3YTI1Y2dabS9JY05XYWkwZnNmN2d3VVlTU1VUbEN0bHdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcyNzE4MDY0CWZpbGU6RWNsaXBzZSBMYXVuY2hlcl8xLjAuMC1hbHBoYS04X3g2NC1zZXR1cC5leGUKQkNLdFVJTHczcXRLK1pxOFMxMFNKaW5tSlJldk1CbmYraitoaDN6QTFTNVQ4MFNKbTMvT3BUVDZjTjFKaGdETGxzUTNzQ01aY2hzYVd1VXBjY1pwQkE9PQo=",
+      "url": "https://github.com/Brezzeyboi/aether-releases/releases/download/v1.0.0-alpha-8/Eclipse.Launcher_1.0.0-alpha-8_x64-setup.exe"
     }
   }
 }
