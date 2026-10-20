@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "product": "eclipse-client",
+  "version": "1.0.0-beta-3",
+  "channel": "beta",
+  "notes": "# Eclipse Launcher Beta 3 — the overhaul checkpoint\r\n\r\nThis beta brings together the launcher redesign and the work completed since Beta 2, published on July 19, 2026. Eclipse remains the name for this checkpoint.\r\n\r\n## A new launcher workspace\r\n\r\n- Redesigned Home, Library, Addons, instance pages, Settings and Customization around shared materials, spacing and controls.\r\n- Image-led worlds and server cards, new Minecraft scene artwork, and a player preview that supports mouse, touch and keyboard rotation.\r\n- Warm light surfaces, frosted and liquid glass materials, working appearance preferences and reduced-motion support.\r\n- Playtime charts with hover/focus details, server/world activity, and a dedicated Digital wellbeing page with optional daily limits and reminders.\r\n\r\n## More useful installations and addons\r\n\r\n- Managed installation folders, explicit import flows, clearer loader/client identity and fuller instance pages.\r\n- Modrinth and CurseForge browsing, filters, continuous browsing, installation feedback and compatible mod update handling. CurseForge requires a configured API key.\r\n- An OptiFine installer bridge that inspects your selected installer, prepares its matching Minecraft base and imports a separate installation. Imported OptiFine profiles retain their original icon and shader settings.\r\n- Parallel download controls: one transfer when off, a remembered file count when on, and an independent bandwidth limit.\r\n\r\n## A server workspace built for running a server\r\n\r\n- A four-step Create server dialog: Customize, Software, Sharing and Review, including banner/icon editing and a Minecraft-style greeting preview.\r\n- A console with readable severity and Minecraft colors, search, wrap/follow, log export and a command bar. Memory shows measured JVM heap against the server's assigned memory.\r\n- Folder navigation and a local Monaco editor with save feedback and protection against losing unsaved changes.\r\n- Players, plugins and worlds tools; grouped server options; and provider connection setup in Settings. Plugin browsing supports Modrinth and CurseForge.\r\n- Player profiles include inventory, equipment, ender chest, statistics and draggable Minecraft-style advancement trees. Supported server runtimes can use the live companion for player reads and changes while running; unavailable live controls remain explicit.\r\n- Overworld, Nether and End cards with dimension uploads, world backups and file access. Runtime/software changes have recovery paths, and world downgrades require a fresh world or a compatible backup.\r\n- Reinstall now offers **Back up and reinstall** or **Reinstall without backup**, with an explicit full-reset warning. Runtime repair remains separate.\r\n- Join chooses a matching installed client, or offers compatible choices, then launches Minecraft with the server address. Known loader builds and modpack identities are checked rather than guessed from names.\r\n\r\n## Skins, capes and Minecraft details\r\n\r\n- Separate Skin, Capes and Cosmetics sections, regular cape selection beside its heading, and animated cape previews with account ownership checks.\r\n- Shared skin/cosmetics delivery, locally cached previews and internal cosmetic resources instead of selectable generated resource packs.\r\n- Improved inventory item renders, player-head fallbacks, held-item transforms and folded elytra geometry.\r\n- Advancement trees with connected branches, chapter tabs, drag panning, search and hover/focus details in both server and saved-world profiles.\r\n\r\n## Less repeated work and better recovery\r\n\r\n- Shared startup requests, bounded caches, lazy loading of the file editor and buffered Minecraft archive reads reduce repeated loading and world refresh work.\r\n- Clearer launch/import/download errors and stronger handling of stale responses, interrupted writes and conflicting mod updates.\r\n- A new native installer with animated scenes and a feature tour; a separate updater and redesigned uninstaller.\r\n- The update notice stays compact. **What's new** shows the offered release's notes; **Update & restart** hands off to the updater and reopens the launcher.\r\n- Installer cancellation now completes cleanup and closes instead of remaining stuck in a cancelling state.\r\n\r\n## Before testing\r\n\r\n- **Moving from July's Beta 2:** download the new **Eclipse-Setup.exe**. That release uses the previous installer/update format and cannot be assumed to migrate through the new updater. Keep a backup of existing launcher and game data, and do not run the old uninstaller's data-removal option during migration.\r\n- This is a Windows x64 beta. Actual compatibility varies by Minecraft version, loader, client and server software; it is not a claim that every combination has been tested.\r\n- Saved single-player world profiles are read only. Live server edits require the supported companion and connection checks. Microsoft animated cape linking is not available yet.\r\n- Public server discovery and hosted-server purchasing remain Coming soon. Future social features and the rename are outside this checkpoint.\r\n- Please include the launcher version, Minecraft/loader version and steps to reproduce when reporting a problem. Remove tokens, account credentials and private addresses from shared logs.\r\n",
+  "components": [
+    {
+      "id": "app",
+      "role": "app",
+      "required": true,
+      "target": "",
+      "format": "zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-3/app.zip",
+      "download_size": 118965395,
+      "installed_size": 148516864,
+      "sha256": "87bcc3357faf8823b4eb65047010d2579daac961354a0046b1c97e789b030ddf"
+    },
+    {
+      "id": "jre21",
+      "role": "runtime",
+      "required": true,
+      "target": "java/jre21",
+      "format": "zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-3/jre21.zip",
+      "download_size": 42959362,
+      "installed_size": 126620561,
+      "sha256": "5fb30a043fe009e3979b2bb54d581c951f0ad9f2aeff90fe62c09944185f6a0a"
+    },
+    {
+      "id": "jre25",
+      "role": "runtime",
+      "required": true,
+      "target": "java/jre25",
+      "format": "zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-3/jre25.zip",
+      "download_size": 43310520,
+      "installed_size": 126762942,
+      "sha256": "91c5c001ecbf2ab4a6381e4293682af0564ab63e74a543498cb02bc3f6fb06e1"
+    }
+  ]
+}
