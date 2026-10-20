@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "eclipse-client",
-  "version": "1.0.0-beta-4",
+  "version": "1.0.0-beta-5",
   "channel": "beta",
-  "notes": "# Eclipse Launcher Beta 4 — cosmetics hotfix\r\n\r\nThis update fixes a Minecraft startup crash in the cosmetics bridge and allows cosmetics agents to update independently of the launcher.\r\n\r\n## Fixed\r\n\r\n- Fixed the Identifier factory lookup that crashed Fabric 1.21.11 while Minecraft loaded internal cosmetic resources. The fix is included in the Java 8, 17, 21 and 25 agents.\r\n- Unsupported identifier APIs leave Minecraft's original resource list intact instead of attaching an unusable provider.\r\n- Fixed the installer's whole-number size metadata and added a real packaged-install smoke check to release builds.\r\n\r\n## Cosmetics updates from the CDN\r\n\r\n- Each online Minecraft launch checks the CDN content revision. A newer agent is downloaded, checked against its SHA-256 and size, and used for that launch.\r\n- Unchanged agents are reused. A stale manifest cannot downgrade a newer verified cached agent.\r\n- Agent JARs use separate versioned filenames so an update does not replace a file another Minecraft process has open.\r\n- If the CDN is unavailable or a download fails validation, Minecraft uses the last verified agent. Offline launches use the cache, with the fixed bundled agent available for recovery.\r\n- Online skin, badge and cape selections still come from the skin server; the local agent is the renderer, not the authority for account selections.\r\n\r\n## Before testing\r\n\r\nInstall this launcher update before testing the cosmetics fix. Beta 3 restores its embedded cosmetics agent; deleting skinlib alone does not replace that agent. After updating, close and relaunch Minecraft to load the new renderer.\r\n\r\nThe fixed agents passed 60 Java unit tests, all four supported Java runtime fixtures, and real Minecraft resource-manager checks including Fabric 1.21.11. These checks do not replace testing the beta testers' full modpacks and gameplay.\r\n",
+  "notes": "# Eclipse Launcher Beta 5\r\n\r\nThis beta fixes update recovery and adds smaller incremental app updates, an About page and a proper new-installation flow for modpacks.\r\n\r\n## Updates\r\n\r\n- The updater asks every running launcher from this installation to close before the app swap, and checks again after downloading. A leftover background process is ended only after its windows have closed, a grace period has elapsed and the open process handle is verified against this installation again. A still-visible window blocks the update. Other installations and Minecraft processes are not closed.\r\n- Interrupted swaps retain the previous installation record. A failed rename can no longer mark the old executable as the new version.\r\n- The actual launcher executable version is verified before committing and before reporting an installation as current.\r\n- Unchanged Java runtimes are preserved, including mixed updates where only one runtime changes. The new updater fetches a runtime only when its published component changed or its required files are missing.\r\n- Release builds now generate a GitHub-hosted Windows binary delta against the previous beta. Every reconstructed file is verified before the installation swap; changed bases or rejected patches fall back to the full verified app archive.\r\n\r\n## About Eclipse\r\n\r\n- Settings now shows the running launcher version, release channel, platform, copyable build information and an update check.\r\n- Privacy, Terms and the installation folder are accessible from the same section. A mismatched installation record is shown explicitly.\r\n- New Minecraft cabin artwork uses the launcher's existing brand, controls and theme materials. Seven logo taps bring out Atro.\r\n\r\n## Modpacks\r\n\r\n- Modpack browsing no longer asks for a target instance or filters releases to the currently selected installation.\r\n- Create installation lets you name a separate installation and choose its exact pack release, Minecraft version and loader filter.\r\n- Both catalogue cards and project pages use this flow. The Create action remains visible in smaller windows.\r\n\r\n## Before testing\r\n\r\nBeta 4 and older updaters need one ordinary app update to receive the incremental-update engine. They will use the full app archive for this transition; unchanged Java archives are no longer mandatory for that old update path. Fresh Setup downloads still include bundled Java. Later updates can use deltas when the installed base matches the published patch. Older or modified bases use the full app fallback.\r\n\r\nIf an older updater left an old launcher running or an incorrect installation record, close the launcher and run the new Setup against the same installation folder. The new engine compares the actual executable version rather than trusting that record.\r\n\r\nOffline native reconstruction tests cover unchanged, patched, new and removed files; damaged bases, wrong hashes, wrong releases and path traversal are rejected. Recovery tests cover interrupted swaps and runtime reuse. UI verification used real Modrinth releases with an explicit development callback: Minecraft 1.21.11 and pack 12.2.2 reached creation unchanged, without writing an installation. Full tester modpack gameplay and live Windows upgrade testing remain required.\r\n",
   "components": [
     {
       "id": "app",
@@ -11,18 +11,28 @@
       "required": true,
       "target": "",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-4/app.zip",
-      "download_size": 118993012,
-      "installed_size": 148521472,
-      "sha256": "561e9e7427bd1b1f10aed210b181628149a3855b7cc9e1521b1dd2a5bdfd0251"
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/app.zip",
+      "download_size": 121313999,
+      "installed_size": 150895104,
+      "sha256": "b69c4d3d381698ba07ef216aae5eb9f1a259bce92f3362f080530e1289f38743",
+      "deltas": [
+        {
+          "format": "msdelta-zip-v1",
+          "from_version": "1.0.0-beta-4",
+          "from_sha256": "561e9e7427bd1b1f10aed210b181628149a3855b7cc9e1521b1dd2a5bdfd0251",
+          "sha256": "da4133b11b92dc7a0c85e53d0227032612c7059799343a5c3b57ffab5cc4a9b4",
+          "download_size": 6481008,
+          "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/app-from-v1.0.0-beta-4.delta.zip"
+        }
+      ]
     },
     {
       "id": "jre21",
       "role": "runtime",
-      "required": true,
+      "required": false,
       "target": "java/jre21",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-4/jre21.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/jre21.zip",
       "download_size": 42959362,
       "installed_size": 126620561,
       "sha256": "5fb30a043fe009e3979b2bb54d581c951f0ad9f2aeff90fe62c09944185f6a0a"
@@ -30,10 +40,10 @@
     {
       "id": "jre25",
       "role": "runtime",
-      "required": true,
+      "required": false,
       "target": "java/jre25",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-4/jre25.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/jre25.zip",
       "download_size": 43310520,
       "installed_size": 126762942,
       "sha256": "91c5c001ecbf2ab4a6381e4293682af0564ab63e74a543498cb02bc3f6fb06e1"
