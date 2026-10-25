@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "eclipse-client",
-  "version": "1.0.0-beta-5",
+  "version": "1.0.0-beta-6",
   "channel": "beta",
-  "notes": "# Eclipse Launcher Beta 5\r\n\r\nThis beta fixes update recovery and adds smaller incremental app updates, an About page and a proper new-installation flow for modpacks.\r\n\r\n## Updates\r\n\r\n- The updater asks every running launcher from this installation to close before the app swap, and checks again after downloading. A leftover background process is ended only after its windows have closed, a grace period has elapsed and the open process handle is verified against this installation again. A still-visible window blocks the update. Other installations and Minecraft processes are not closed.\r\n- Interrupted swaps retain the previous installation record. A failed rename can no longer mark the old executable as the new version.\r\n- The actual launcher executable version is verified before committing and before reporting an installation as current.\r\n- Unchanged Java runtimes are preserved, including mixed updates where only one runtime changes. The new updater fetches a runtime only when its published component changed or its required files are missing.\r\n- Release builds now generate a GitHub-hosted Windows binary delta against the previous beta. Every reconstructed file is verified before the installation swap; changed bases or rejected patches fall back to the full verified app archive.\r\n\r\n## About Eclipse\r\n\r\n- Settings now shows the running launcher version, release channel, platform, copyable build information and an update check.\r\n- Privacy, Terms and the installation folder are accessible from the same section. A mismatched installation record is shown explicitly.\r\n- New Minecraft cabin artwork uses the launcher's existing brand, controls and theme materials. Seven logo taps bring out Atro.\r\n\r\n## Modpacks\r\n\r\n- Modpack browsing no longer asks for a target instance or filters releases to the currently selected installation.\r\n- Create installation lets you name a separate installation and choose its exact pack release, Minecraft version and loader filter.\r\n- Both catalogue cards and project pages use this flow. The Create action remains visible in smaller windows.\r\n\r\n## Before testing\r\n\r\nBeta 4 and older updaters need one ordinary app update to receive the incremental-update engine. They will use the full app archive for this transition; unchanged Java archives are no longer mandatory for that old update path. Fresh Setup downloads still include bundled Java. Later updates can use deltas when the installed base matches the published patch. Older or modified bases use the full app fallback.\r\n\r\nIf an older updater left an old launcher running or an incorrect installation record, close the launcher and run the new Setup against the same installation folder. The new engine compares the actual executable version rather than trusting that record.\r\n\r\nOffline native reconstruction tests cover unchanged, patched, new and removed files; damaged bases, wrong hashes, wrong releases and path traversal are rejected. Recovery tests cover interrupted swaps and runtime reuse. UI verification used real Modrinth releases with an explicit development callback: Minecraft 1.21.11 and pack 12.2.2 reached creation unchanged, without writing an installation. Full tester modpack gameplay and live Windows upgrade testing remain required.\r\n",
+  "notes": "# Ecliptic Launcher · Beta 6\r\n\r\nEclipse becomes **Ecliptic Launcher**, with the new planet mark, refreshed account experience and improvements throughout the launcher.\r\n\r\n## New and improved\r\n\r\n- Ecliptic branding across the launcher, Windows installer, updater and uninstaller, with public links to **eclipticmc.online**.\r\n- A smoother player-selection carousel, clearer account controls and the new Ecliptic Account mark.\r\n- Per-instance **Compatibility mode** in New Installation, Edit instance and Launch configuration. Enable it to skip both Skinlib and Ecliptic cosmetics on that instance’s next launch; other installations keep their own settings.\r\n- Partner-server cards now show server details and a **Click to join** hint. Clicking opens an installation picker grouped by supported Minecraft versions, including your installed loader variants. **Download & join** prepares the newest supported stable vanilla release when it is missing.\r\n- Improved modpack installation controls, version selection and Library presentation.\r\n- Refined Java and memory settings, JVM presets, appearance controls and frosted-glass surfaces.\r\n- Page-specific loading placeholders, faster installation reads in Addons, and server/world artwork in wellbeing history.\r\n- **Save launcher logs** in About, with timestamped text files saved under the launcher’s data folder.\r\n- Updated skin, animated-cape and badge previews, plus staff laptop connection support for authorised control-room accounts.\r\n\r\n## Fixes\r\n\r\n- Compatibility mode prevents appearance-agent preparation and injection across Java versions.\r\n- Partner-server joining uses the instance you choose, rather than whichever installation was selected on Home. Latest Release is pinned to a supported version for that join.\r\n- Corrected the Settings selection indicator and Ecliptic mark rendering while searching.\r\n- Removed the unwanted glass tint behind the Normal cape label and cleaned up partner-server tooltips.\r\n- Launcher child processes run without opening command windows, including server and tunnel helpers.\r\n- Retained incremental app updates, existing runtime reuse and the full-download fallback from Beta 5.\r\n- Existing beta shortcuts and older update helpers can open the renamed application through its compatibility entry point.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Test both a fresh installation and an upgrade from Beta 5, especially account persistence, installed games, shortcuts and updating. Back up important worlds before testing beta software.\r\n\r\nUse **Ecliptic-Setup.exe** for installation. Component ZIPs are updater payloads, not source-code downloads. Older beta installations may still use Eclipse names for storage and compatibility; the updater preserves their data.\r\n\r\nPartner compatibility follows the server’s advertised versions. Servers with custom required modpacks may still need the appropriate pack. Compatibility mode also disables launcher-provided appearance features for that instance until you switch it off again.\r\n",
   "components": [
     {
       "id": "app",
@@ -11,20 +11,10 @@
       "required": true,
       "target": "",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/app.zip",
-      "download_size": 121313999,
-      "installed_size": 150895104,
-      "sha256": "b69c4d3d381698ba07ef216aae5eb9f1a259bce92f3362f080530e1289f38743",
-      "deltas": [
-        {
-          "format": "msdelta-zip-v1",
-          "from_version": "1.0.0-beta-4",
-          "from_sha256": "561e9e7427bd1b1f10aed210b181628149a3855b7cc9e1521b1dd2a5bdfd0251",
-          "sha256": "da4133b11b92dc7a0c85e53d0227032612c7059799343a5c3b57ffab5cc4a9b4",
-          "download_size": 6481008,
-          "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/app-from-v1.0.0-beta-4.delta.zip"
-        }
-      ]
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/app.zip",
+      "download_size": 123568432,
+      "installed_size": 154733056,
+      "sha256": "bdbad149a6cc9a4a86515c7dc6eeeee8a968ba39b6be95cbcbeb25d5b29f0582"
     },
     {
       "id": "jre21",
@@ -32,7 +22,7 @@
       "required": false,
       "target": "java/jre21",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/jre21.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/jre21.zip",
       "download_size": 42959362,
       "installed_size": 126620561,
       "sha256": "5fb30a043fe009e3979b2bb54d581c951f0ad9f2aeff90fe62c09944185f6a0a"
@@ -43,7 +33,7 @@
       "required": false,
       "target": "java/jre25",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-5/jre25.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/jre25.zip",
       "download_size": 43310520,
       "installed_size": 126762942,
       "sha256": "91c5c001ecbf2ab4a6381e4293682af0564ab63e74a543498cb02bc3f6fb06e1"
