@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "eclipse-client",
-  "version": "1.0.0-beta-6",
+  "version": "1.0.0-beta-8",
   "channel": "beta",
-  "notes": "# Ecliptic Launcher · Beta 6\r\n\r\nEclipse becomes **Ecliptic Launcher**, with the new planet mark, refreshed account experience and improvements throughout the launcher.\r\n\r\n## New and improved\r\n\r\n- Ecliptic branding across the launcher, Windows installer, updater and uninstaller, with public links to **eclipticmc.online**.\r\n- A smoother player-selection carousel, clearer account controls and the new Ecliptic Account mark.\r\n- Per-instance **Compatibility mode** in New Installation, Edit instance and Launch configuration. Enable it to skip both Skinlib and Ecliptic cosmetics on that instance’s next launch; other installations keep their own settings.\r\n- Partner-server cards now show server details and a **Click to join** hint. Clicking opens an installation picker grouped by supported Minecraft versions, including your installed loader variants. **Download & join** prepares the newest supported stable vanilla release when it is missing.\r\n- Improved modpack installation controls, version selection and Library presentation.\r\n- Refined Java and memory settings, JVM presets, appearance controls and frosted-glass surfaces.\r\n- Page-specific loading placeholders, faster installation reads in Addons, and server/world artwork in wellbeing history.\r\n- **Save launcher logs** in About, with timestamped text files saved under the launcher’s data folder.\r\n- Updated skin, animated-cape and badge previews, plus staff laptop connection support for authorised control-room accounts.\r\n\r\n## Fixes\r\n\r\n- Compatibility mode prevents appearance-agent preparation and injection across Java versions.\r\n- Partner-server joining uses the instance you choose, rather than whichever installation was selected on Home. Latest Release is pinned to a supported version for that join.\r\n- Corrected the Settings selection indicator and Ecliptic mark rendering while searching.\r\n- Removed the unwanted glass tint behind the Normal cape label and cleaned up partner-server tooltips.\r\n- Launcher child processes run without opening command windows, including server and tunnel helpers.\r\n- Retained incremental app updates, existing runtime reuse and the full-download fallback from Beta 5.\r\n- Existing beta shortcuts and older update helpers can open the renamed application through its compatibility entry point.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Test both a fresh installation and an upgrade from Beta 5, especially account persistence, installed games, shortcuts and updating. Back up important worlds before testing beta software.\r\n\r\nUse **Ecliptic-Setup.exe** for installation. Component ZIPs are updater payloads, not source-code downloads. Older beta installations may still use Eclipse names for storage and compatibility; the updater preserves their data.\r\n\r\nPartner compatibility follows the server’s advertised versions. Servers with custom required modpacks may still need the appropriate pack. Compatibility mode also disables launcher-provided appearance features for that instance until you switch it off again.\r\n",
+  "notes": "# Ecliptic Launcher · Beta 8\r\n\r\nSafer imports, faster prepared pages, and a quieter launcher while Minecraft runs.\r\n\r\n## Fixes\r\n\r\n- New installations with an existing name automatically receive `(1)`, `(2)`, and so on. Names are allocated when saving, including imports in the same batch; editing an existing installation keeps its name.\r\n- Imported launch profiles and client JARs use private internal IDs, so another launcher's version metadata cannot collide with or overwrite an existing installation.\r\n- Shared libraries are reused only when their bytes match. Conflicting imported libraries get separate paths, and native-library classifiers are copied too.\r\n- Copied loader profiles retain their exact launch configuration instead of being replaced by a generic loader installation.\r\n- Imported installations keep their real Minecraft version in the UI and launch pipeline even when their internal launch IDs differ. Legacy Java selection and cosmetics hooks use the actual Minecraft version, with regression coverage for Java 8, 17, 21 and 25.\r\n- World previews resolve imported client assets instead of assuming a matching vanilla client JAR already exists.\r\n- Invalid imported library metadata returns an import error instead of crashing the operation.\r\n- OptiFine's import confirmation uses the final saved installation name.\r\n\r\n## Faster prepared pages\r\n\r\n- The preloader prepares bundled artwork, fonts, page resources, saved installation contents, world thumbnails, server icons and account appearance through shared caches.\r\n- Unchanged installation display snapshots survive restarts. Changed files trigger fresh inspection, while installation and launch integrity checks remain independent.\r\n- Packaged images preload as compressed bytes, avoiding decoded copies of every offscreen background in RAM.\r\n- Library and Addons share prepared inventories and installed-project artwork. History refreshes no longer discard those file caches.\r\n- Optional previews, animations, polling and live-log repaints pause while a managed Minecraft game is running and the launcher is in the background. Returning to the launcher or exiting Minecraft wakes them; authentication, game monitoring and native logs continue.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Back up important worlds and test a fresh installation as well as an upgrade from Beta 6. Use **Ecliptic-Setup.exe** to install; component ZIPs are compiled updater payloads.\r\n\r\nImported source installations are retained. First-time or changed-file inspection can take longer than a warm start. New catalogue searches and live service data still need network access, and Java versions not already installed may download on first launch. Startup improvements do not guarantee a particular Minecraft FPS increase.\r\n",
   "components": [
     {
       "id": "app",
@@ -11,10 +11,20 @@
       "required": true,
       "target": "",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/app.zip",
-      "download_size": 123568432,
-      "installed_size": 154733056,
-      "sha256": "bdbad149a6cc9a4a86515c7dc6eeeee8a968ba39b6be95cbcbeb25d5b29f0582"
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-8/app.zip",
+      "download_size": 123989604,
+      "installed_size": 155805184,
+      "sha256": "675ea3f5ea827d46651a1bd31a6124dac83a9f0ca057fb775725ac607ed7c818",
+      "deltas": [
+        {
+          "format": "msdelta-zip-v1",
+          "from_version": "1.0.0-beta-6",
+          "from_sha256": "bdbad149a6cc9a4a86515c7dc6eeeee8a968ba39b6be95cbcbeb25d5b29f0582",
+          "sha256": "cb72d0a4e8a8702ebab131a3097a9f8c87905b9b0f636f1540cfe61f51b54c61",
+          "download_size": 6817098,
+          "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-8/app-from-v1.0.0-beta-6.delta.zip"
+        }
+      ]
     },
     {
       "id": "jre21",
@@ -22,7 +32,7 @@
       "required": false,
       "target": "java/jre21",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/jre21.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-8/jre21.zip",
       "download_size": 42959362,
       "installed_size": 126620561,
       "sha256": "5fb30a043fe009e3979b2bb54d581c951f0ad9f2aeff90fe62c09944185f6a0a"
@@ -33,10 +43,10 @@
       "required": false,
       "target": "java/jre25",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-6/jre25.zip",
-      "download_size": 43310520,
-      "installed_size": 126762942,
-      "sha256": "91c5c001ecbf2ab4a6381e4293682af0564ab63e74a543498cb02bc3f6fb06e1"
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-8/jre25.zip",
+      "download_size": 43389056,
+      "installed_size": 127043194,
+      "sha256": "0f350587837460e34ffc2fe0d1e74ddec39a5fb86f4842d2c2814ce92853bd7e"
     }
   ]
 }
