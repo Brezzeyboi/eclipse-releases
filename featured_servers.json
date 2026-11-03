@@ -1,36 +1,18 @@
 {
-  "premium": [
-    {
-      "name": "Hypixel",
-      "ip": "mc.hypixel.net",
-      "description": "The #1 Minecraft Server"
-    },
-    {
-      "name": "Wynncraft",
-      "ip": "play.wynncraft.com",
-      "description": "Largest MMORPG"
-    },
-    {
-      "name": "CubeCraft",
-      "ip": "play.cubecraft.net",
-      "description": "Exclusively Premium"
-    }
-  ],
   "cracked": [
     {
-      "name": "Complex Gaming",
-      "ip": "hub.mc-complex.com",
-      "description": "Pixelmon, Skyblock"
-    },
+      "description": "Ecliptic partner server",
+      "ip": "grindmc.mcsh.gg",
+      "name": "Grind MC",
+      "icon": "https://raw.githubusercontent.com/Brezzeyboi/eclipse-releases/main/grind-mc-icon.png"
+    }
+  ],
+  "premium": [
     {
-      "name": "PikaNetwork",
-      "ip": "play.pika-network.net",
-      "description": "Top Cracked Server"
-    },
-    {
-      "name": "JartexNetwork",
-      "ip": "play.jartexnetwork.com",
-      "description": "Factions & Skyblock"
+      "description": "Ecliptic partner server",
+      "ip": "grindmc.mcsh.gg",
+      "name": "Grind MC",
+      "icon": "https://raw.githubusercontent.com/Brezzeyboi/eclipse-releases/main/grind-mc-icon.png"
     }
   ]
 }
