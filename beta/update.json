@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "eclipse-client",
-  "version": "1.0.0-beta-9",
+  "version": "1.0.0-beta-10",
   "channel": "beta",
-  "notes": "# Ecliptic Launcher · Beta 9\r\n\r\nCustomize Home, manage your installations from the Library, and use Friends to get into Minecraft together.\r\n\r\n## Home and Library\r\n\r\n- Cherry Waterline is the new Ecliptic Night backdrop, with moonlight across the lake. Use your own image or video, adjust its colour, and save appearance profiles.\r\n- Move or resize Home widgets and pose your player directly in the model preview. Minecraft news and Ecliptic release notes are available from **News & updates**.\r\n- Click a Library card to open its installation. The three-dot menu gives you its actions, and deleting an installation asks for confirmation before removing its managed files, including its worlds and mods.\r\n- Launch multiple installations in separate game folders and see the running count in the titlebar. The Home Play button shows launch progress.\r\n\r\n## Friends and servers\r\n\r\n- Open Friends for requests, recently played players, profiles, and invitation history. Invite a friend to a joined or hosted server and choose a compatible installation when joining.\r\n- Try singleplayer invitations by opening your world to LAN and entering Minecraft’s port in Friends. This experimental Windows flow uses a linked ngrok account with TCP access. World cards use the save’s thumbnail when available.\r\n- Join Grind MC from Public Servers, or manage local servers with server cards, player controls, and world views.\r\n\r\n## Updates and fixes\r\n\r\n- Review linked modpack and individual mod updates from your installation.\r\n- Library, Addons, and installation pages give more space to scrolling content. Selecting a day in Digital Wellbeing keeps the chart’s date range in place.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Existing beta users can use the in-launcher updater. New users should download **Ecliptic-Setup.exe**. Back up worlds you want to keep before deleting an installation. The singleplayer invite flow has been checked in a test fixture. A real two-player join remains a beta test case.\r\n",
+  "notes": "# Ecliptic Launcher · Beta 10\r\n\r\n## Home\r\n\r\n- Raised the player model in Cherry Waterline. Home keeps the character above the playtime and recently played panel as the window resizes.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Update from inside Ecliptic or use **Ecliptic-Setup.exe** for a fresh installation. Try Home at your usual window size and in a shorter window, including with a saved player pose.\r\n",
   "components": [
     {
       "id": "app",
@@ -11,18 +11,18 @@
       "required": true,
       "target": "",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-9/app.zip",
-      "download_size": 134108839,
-      "installed_size": 168171520,
-      "sha256": "041cb3ec542ac4a4378e8c23872933db25758bfe2c27a414a6d07cbdd325aabd",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-10/app.zip",
+      "download_size": 134108382,
+      "installed_size": 168172032,
+      "sha256": "961483ba815e4e4bd722b57b5f3edcb606f129481da3ac4b8376b11d23d5b43a",
       "deltas": [
         {
           "format": "msdelta-zip-v1",
-          "from_version": "1.0.0-beta-8",
-          "from_sha256": "675ea3f5ea827d46651a1bd31a6124dac83a9f0ca057fb775725ac607ed7c818",
-          "sha256": "5219f0ea645d3463d5c168c3c55053d2f5d8f96cf0cb3992c4c61a00e4f96602",
-          "download_size": 14351221,
-          "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-9/app-from-v1.0.0-beta-8.delta.zip"
+          "from_version": "1.0.0-beta-9",
+          "from_sha256": "041cb3ec542ac4a4378e8c23872933db25758bfe2c27a414a6d07cbdd325aabd",
+          "sha256": "c5cc36b04aa23c6be201ac528d2f67d65e4d7911c8ce1e0a1aa8fedbdcf93505",
+          "download_size": 3363005,
+          "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-10/app-from-v1.0.0-beta-9.delta.zip"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "required": false,
       "target": "java/jre21",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-9/jre21.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-10/jre21.zip",
       "download_size": 43068087,
       "installed_size": 126926148,
       "sha256": "588704423c20cda67ff5e5a1eacf8cd63ab33ed81a2c47e8bed12cd461bc61c9"
@@ -43,7 +43,7 @@
       "required": false,
       "target": "java/jre25",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-9/jre25.zip",
+      "url": "https://github.com/Brezzeyboi/eclipse-releases/releases/download/v1.0.0-beta-10/jre25.zip",
       "download_size": 43389056,
       "installed_size": 127043194,
       "sha256": "0f350587837460e34ffc2fe0d1e74ddec39a5fb86f4842d2c2814ce92853bd7e"
