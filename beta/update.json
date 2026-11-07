@@ -18,7 +18,7 @@
       "deltas": [
         {
           "format": "msdelta-zip-v1",
-          "from_version": "1.0.0-beta-13",
+          "from_version": "1.0.0-beta-14",
           "from_sha256": "571bb5d231044cad3fe9d18408098095c05dc6c2c64175b3333cfb0ddc65b696",
           "sha256": "c00bfcc243a4804afdf26c7c53cc1fc8dc9d603c0c407225b30bacfcd8bbe82b",
           "download_size": 3614154,
