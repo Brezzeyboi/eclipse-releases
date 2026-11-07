@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "eclipse-client",
-  "version": "1.0.0-beta-13",
+  "version": "1.0.0-beta-14",
   "channel": "beta",
-  "notes": "# Ecliptic Launcher · Beta 13\r\n\r\n## Tray and Discord\r\n\r\n- Closing the launcher keeps Ecliptic available in the system tray. Open the quick-launch panel for up to six recent or frequently played installations, Friends, Customize, Open Ecliptic, and Quit.\r\n- Discord activity continues while the main window is hidden. Your avatar is the large image, with Ecliptic as the small icon and a public profile link for the active Ecliptic account. No active account means no Show profile button.\r\n- Idle Discord activity keeps the same elapsed-time start across activity refreshes and reconnects. Minecraft activity retains the game's original start time.\r\n- Public profile links can open the player's profile in Ecliptic. Windows setup and updates register the launcher link; uninstall removes its registration.\r\n\r\n## Startup and Home\r\n\r\n- Installed Windows builds check for updates in the preloader and hand off eligible updates to the updater. Offline checks continue startup, and running games or hosted servers prevent an automatic update handoff.\r\n- The default Home player viewport has more room around poses and animations while keeping the player's scale and ground position. Saved custom widget layouts retain their existing framing.\r\n- Updated the Friends orbit icon across the launcher and tray.\r\n\r\n## Before testing\r\n\r\nThis is a Windows x64 beta. Use **Ecliptic-Setup.exe** for a fresh installation or update through the launcher. Startup auto-updates apply to installed release builds; development and isolated test builds are excluded. Quit from the tray to fully close Ecliptic. Public profiles require an internet connection and a discoverable Ecliptic account. Discord must be running with activity sharing enabled.\r\n\r\nThe timer packet regression checks and startup update scenarios passed. A long-duration Discord desktop session and every tray shortcut on different monitor/DPI configurations remain beta test cases. Existing singleplayer invitations retain the experimental ngrok TCP flow from Beta 9.\r\n",
+  "notes": "# Ecliptic Launcher - Beta 14\r\n\r\n## Fix\r\n\r\n- Fixed playit account linking failing with \"Agent version must be at most 30 characters\". Initial setup and approval polling now share a shorter, length-limited version value.\r\n- Existing playit links, keys, servers and installations are kept.\r\n\r\n## Before testing\r\n\r\nThis Windows x64 hotfix updates Beta 13. Update through Ecliptic or install **Ecliptic-Setup.exe**. If linking previously failed, generate a fresh claim after updating and approve it in your browser. The anonymous setup request and version-length regression passed; completing a claim still requires your browser approval.\r\n",
   "components": [
     {
       "id": "app",
@@ -11,18 +11,18 @@
       "required": true,
       "target": "",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-13/app.zip",
-      "download_size": 134230704,
-      "installed_size": 168480256,
-      "sha256": "571bb5d231044cad3fe9d18408098095c05dc6c2c64175b3333cfb0ddc65b696",
+      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-14/app.zip",
+      "download_size": 134232099,
+      "installed_size": 168481280,
+      "sha256": "acea66893da4eeae74d5416b8a0da9799e5a71e4e9b758fcfd97d8d73278e728",
       "deltas": [
         {
           "format": "msdelta-zip-v1",
-          "from_version": "1.0.0-beta-10",
-          "from_sha256": "961483ba815e4e4bd722b57b5f3edcb606f129481da3ac4b8376b11d23d5b43a",
-          "sha256": "0ae2d61c6e19699549d6530ca173be220b9a825008b5fba9aebe29cacd7a91dc",
-          "download_size": 5066237,
-          "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-13/app-from-v1.0.0-beta-10.delta.zip"
+          "from_version": "1.0.0-beta-13",
+          "from_sha256": "571bb5d231044cad3fe9d18408098095c05dc6c2c64175b3333cfb0ddc65b696",
+          "sha256": "c00bfcc243a4804afdf26c7c53cc1fc8dc9d603c0c407225b30bacfcd8bbe82b",
+          "download_size": 3614154,
+          "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-14/app-from-v1.0.0-beta-13.delta.zip"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "required": false,
       "target": "java/jre21",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-13/jre21.zip",
+      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-14/jre21.zip",
       "download_size": 43068087,
       "installed_size": 126926148,
       "sha256": "588704423c20cda67ff5e5a1eacf8cd63ab33ed81a2c47e8bed12cd461bc61c9"
@@ -43,7 +43,7 @@
       "required": false,
       "target": "java/jre25",
       "format": "zip",
-      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-13/jre25.zip",
+      "url": "https://github.com/Brezzeyboi/ecliptic-releases/releases/download/v1.0.0-beta-14/jre25.zip",
       "download_size": 43389056,
       "installed_size": 127043194,
       "sha256": "0f350587837460e34ffc2fe0d1e74ddec39a5fb86f4842d2c2814ce92853bd7e"
